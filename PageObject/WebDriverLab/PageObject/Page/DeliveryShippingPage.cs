@@ -47,7 +47,33 @@ namespace WebDriverLab.pageobject_model.page
 
         public float GetLocalTaxes()
         {
-            IWebElement localTaxes = driver.FindElement(By.XPath("//div[contains(@class,'summary-block')][2]//div[contains(@class,'value')]"));
+            Thread.Sleep(1000);
+           IWebElement localTaxes = driver.FindElement(By.XPath("//app-razer-order-summary/div/div[2]/div/div[2]"));
+          
+            string temp = localTaxes.Text.Substring(3);
+            return float.Parse(temp.Replace('.',','));
+        }
+
+        public float GetShippingCost()
+        {
+            IWebElement shipping = driver.FindElement(By.XPath("//div[contains(@class,'summary-block')][2]//div[contains(@class,'value')]"));
+            return float.Parse(shipping.Text.Substring(3));
+        }
+
+        public float GetTotal()
+        {
+            IWebElement total = driver.FindElement(By.XPath("//div[contains(@class,'summary-block')][3]//div[contains(@class,'value')]"));
+            return float.Parse(total.Text.Substring(3));
+        }
+        public float GetShippingCostText()
+        {
+            IWebElement shipping = driver.FindElement(By.XPath("//div[contains(@class,'summary-block')][3]//div[contains(@class,'value')]"));
+            return float.Parse(shipping.Text);
+        }
+
+        public float GetSubTotal()
+        {
+            IWebElement localTaxes = driver.FindElement(By.XPath("//div[contains(@class,'summary-block')][0]//div[contains(@class,'value')]"));
             return float.Parse(localTaxes.Text.Substring(3));
         }
     }

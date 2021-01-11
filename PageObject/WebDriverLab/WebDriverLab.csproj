@@ -60,15 +60,15 @@
   <ItemGroup>
     <Compile Include="Driver\DriverSingleton.cs" />
     <Compile Include="Model\Product.cs" />
-    <Compile Include="pageobject_model\CustomCondtitions.cs" />
-    <Compile Include="pageobject_model\page\AddedProductPage.cs" />
-    <Compile Include="pageobject_model\page\DeliveryAddressPage.cs" />
-    <Compile Include="pageobject_model\page\DeliveryShippingPage.cs" />
-    <Compile Include="pageobject_model\page\ProductCatalogPage.cs" />
-    <Compile Include="pageobject_model\page\CartPage.cs" />
-    <Compile Include="pageobject_model\page\Page.cs" />
-    <Compile Include="pageobject_model\page\ProductViewPage.cs" />
-    <Compile Include="pageobject_model\page\RazerHomePage.cs" />
+    <Compile Include="PageObject\CustomCondtitions.cs" />
+    <Compile Include="PageObject\Page\AddedProductPage.cs" />
+    <Compile Include="PageObject\Page\DeliveryAddressPage.cs" />
+    <Compile Include="PageObject\Page\DeliveryShippingPage.cs" />
+    <Compile Include="PageObject\Page\ProductCatalogPage.cs" />
+    <Compile Include="PageObject\Page\CartPage.cs" />
+    <Compile Include="PageObject\Page\Page.cs" />
+    <Compile Include="PageObject\Page\ProductViewPage.cs" />
+    <Compile Include="PageObject\Page\RazerHomePage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service\ProductCreator.cs" />
     <Compile Include="Tests.cs" />

@@ -83,6 +83,7 @@ namespace WebDriverLab
                         .CotinueToShippingMethod()
                         .SelectExpressShipping();
             float localTaxes = cartPage.GetLocalTaxes();
+            Assert.AreEqual(localTaxes, 13.3f);
 
 
         }
