@@ -36,7 +36,7 @@ namespace WebDriverLab
             CartPage cartPage= allMicePage.AddProductToCartByName(firstTestMice.ProductName)
                         .ViewCart();
             bool isAdded = cartPage.isProductAdded(firstTestMice.ProductName);
-            Assert.IsTrue(isAdded, "Product is not added");
+            Assert.IsTrue(isAdded, "Product not added");
             Assert.IsTrue(cartPage.CountAddedProducts() == 1, "Count added product does not match ");
             List<string> productDescr =cartPage.GetProductDescription(firstTestMice.ProductName);
             Assert.AreEqual(productDescr, firstTestMice.ProductDescriptions, "Descriptions does not math");
@@ -67,8 +67,8 @@ namespace WebDriverLab
                 AddProductToCartByName(secondTestMice.ProductName)
                 .ViewCart();
             Assert.IsTrue(cartPage.CountAddedProducts() == 2);
-            Assert.IsTrue(cartPage.isProductAdded("Razer DeathAdder V2 Pro"), "Product is not added");
-            Assert.IsTrue(cartPage.isProductAdded("Razer Naga Pro"), "Product is not added");
+            Assert.IsTrue(cartPage.isProductAdded("Razer DeathAdder V2 Pro"), "Product  not added");
+            Assert.IsTrue(cartPage.isProductAdded("Razer Naga Pro"), "Product  not added");
         }
 
         [Test]
@@ -84,6 +84,7 @@ namespace WebDriverLab
                         .SelectExpressShipping();
             float localTaxes = cartPage.GetLocalTaxes();
             Assert.AreEqual(localTaxes, 13.3f);
+
 
 
         }
